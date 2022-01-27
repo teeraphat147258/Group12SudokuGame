@@ -5,6 +5,8 @@ void newMatrix(int ** &p, int n = 3);
 void deleteMatrix(int **p, int n = 3);
 void setMatrix(int ** p, int n);            // test function
 void printTable(int **p, int n);
+bool UsedInRow(int **p, int N,int number); //N = 9
+bool UsedInCol(int **p, int N,int number);
 
 int main(){
 
@@ -49,4 +51,26 @@ void printTable(int **p, int n){
         cout << "|" << endl;
     }
     cout << "-------------------------";
+}
+
+bool UsedInRow(int **p,int N, int number)
+{   
+    for (int i = 1; i < N+1; i++)
+    {
+        for (int col = 0; col < N; col++)
+            if (**(p + col*i) == number)
+                return true;
+        return false;
+    }
+}
+bool UsedInCol(int **p,int N ,int number)
+{
+    for (int row = 0; row < N; row++)
+    {
+        for (int i = 0; i < N+1; i++)
+            if (**(p + N*1)  == number)
+                return true;
+        else 
+        return false;
+    }
 }
