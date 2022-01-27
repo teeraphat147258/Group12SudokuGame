@@ -1,15 +1,14 @@
 #include<iostream>
 using namespace std;
 
-void setMatrix(int ** p, int n);            // test function
 void EXsuduku(int **p, int n);              // example suduku
-void set0(int ** p, int n);
+void set0(int ** p, int n);                 // set value to zero
 
 void newMatrix(int ** &p, int n = 3);
 void deleteMatrix(int **p, int n = 3);
 void printTable(int **p, int n);
-bool checkRow(int **p, int N,int number); //N = 9
-bool checkCol(int **p, int N,int number);
+bool checkRow(int **p, int n, int x, int y, int num);
+bool checkCol(int **p, int n, int x, int y, int num);
 bool checkBox(int ** p, int n, int x, int y, int num);
 
 
@@ -18,7 +17,8 @@ int main(){
     int **p;
     newMatrix(p);       // box 3*3 --> Array 9*9
 
-    
+    EXsuduku(p, 3);
+    cout << checkCol(p, 3, 3, 3, 5) << endl;
 
     printTable(p, 3);
     deleteMatrix(p);
@@ -49,26 +49,24 @@ void printTable(int **p, int n){
     cout << "-------------------------";
 }
 
-bool checkRow(int **p,int N, int number)
-{   
-    for (int i = 1; i < N+1; i++)
-    {
-        for (int col = 0; col < N; col++)
-            if (**(p + col*i) == number)
-                return true;
-        return false;
+// x --> row , y --> colum
+// x is fixed
+bool checkRow(int **p, int n, int x, int y, int num){ 
+    for (int i = 0; i < n*n; i++){
+        if (p[x][i] == num)
+            return true;
     }
+    return false;
 }
-bool checkCol(int **p,int N ,int number)
-{
-    for (int row = 0; row < N; row++)
-    {
-        for (int i = 0; i < N+1; i++)
-            if (**(p + N*1)  == number)
-                return true;
-        else 
-        return false;
+
+// x --> row , y --> colum
+// y is fixed
+bool checkCol(int **p, int n, int x, int y, int num){
+    for (int i = 0; i < n*n; i++){
+        if (p[i][y] == num)
+            return true;
     }
+    return false;
 }
 
 bool checkBox(int ** p, int n, int x, int y, int num){
