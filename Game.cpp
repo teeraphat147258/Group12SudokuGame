@@ -1,16 +1,17 @@
 #include<iostream>
 using namespace std;
 
-void newMatrix(int ** &p, int n = 9);
-void deleteMatrix(int **p, int n = 9);
+void newMatrix(int ** &p, int n = 3);
+void deleteMatrix(int **p, int n = 3);
 void setMatrix(int ** p, int n);            // test function
-void printTable(int grid[N][N]);
+void printTable(int **p, int n);
 
 int main(){
 
     int **p;
     newMatrix(p);       //Array 9*9
     setMatrix(p, 9);
+    printTable(p, 3);
 
     deleteMatrix(p);
 
@@ -18,12 +19,12 @@ int main(){
 }
 
 void newMatrix(int ** &p, int n){
-    p = new int *[n];
-    for(int i = 0; i < n; i++)      p[i] = new int [n];
+    p = new int *[n*n];
+    for(int i = 0; i < n*n; i++)      p[i] = new int [n*n];
 }
 
 void deleteMatrix(int **p, int n){
-    for(int i = 0; i < n; i++)      delete [] p[i];
+    for(int i = 0; i < n*n; i++)      delete [] p[i];
     delete [] p;
 }
 
@@ -35,22 +36,15 @@ void setMatrix(int ** p, int n){
             p[i][j] = j;
     }
 
-    /*
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++)
-            cout << p[i][j] << " ";
-        cout << endl;
-    }
-    */
 }
 
-void printTable(int grid[N][N]){
+void printTable(int **p, int n){
     cout << "-------------------------\n";
-    for(int i = 0; i < N; i++){
+    for(int i = 0; i < n*n; i++){
         if(i == 3 || i == 6)  cout << "|-------|-------|-------|\n";
-        for(int j = 0; j < N; j++){
+        for(int j = 0; j < n*n; j++){
             if(j == 0 || j == 3 || j == 6)  cout << "| ";
-            cout << grid[i][j] << " ";
+            cout << p[i][j] << " ";
         }
         cout << "|" << endl;
     }
