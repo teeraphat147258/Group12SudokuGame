@@ -4,6 +4,7 @@ using namespace std;
 void newMatrix(int ** &p, int n = 9);
 void deleteMatrix(int **p, int n = 9);
 void setMatrix(int ** p, int n);            // test function
+void printTable(int grid[N][N]);
 
 int main(){
 
@@ -41,4 +42,17 @@ void setMatrix(int ** p, int n){
         cout << endl;
     }
     */
+}
+
+void printTable(int grid[N][N]){
+    cout << "-------------------------\n";
+    for(int i = 0; i < N; i++){
+        if(i == 3 || i == 6)  cout << "|-------|-------|-------|\n";
+        for(int j = 0; j < N; j++){
+            if(j == 0 || j == 3 || j == 6)  cout << "| ";
+            cout << grid[i][j] << " ";
+        }
+        cout << "|" << endl;
+    }
+    cout << "-------------------------";
 }
