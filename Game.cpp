@@ -10,6 +10,8 @@ void printTable(int **p, int n);
 bool checkRow(int **p, int n, int x, int y, int num);
 bool checkCol(int **p, int n, int x, int y, int num);
 bool checkBox(int ** p, int n, int x, int y, int num);
+bool checkAns_of_each(int ** p, int n, int x, int y);
+bool checkAns_suduku(int **p, int n);
 
 
 int main(){
@@ -18,7 +20,7 @@ int main(){
     newMatrix(p);       // box 3*3 --> Array 9*9
 
     EXsuduku(p, 3);
-    cout << checkCol(p, 3, 3, 3, 5) << endl;
+    cout << checkAns_suduku(p, 3) << endl;
 
     printTable(p, 3);
     deleteMatrix(p);
@@ -108,4 +110,29 @@ void set0(int ** p, int n){
             p[i][j] = 0;
     }
    
+}
+
+bool checkAns_of_each(int ** p, int n, int x, int y){
+    int Crow = 0, Ccol = 0, Cbox = 0;
+    for(int num = 1; num <= n*n; num++){
+        if(checkRow(p, n, x, y, num))  Crow++;
+        if(checkCol(p, n, x, y, num))  Ccol++;
+        if(checkBox(p, n, x, y, num))  Cbox++;
+    }
+    
+    if(Crow+Ccol+Cbox == 27)    return true;
+    else                        return false;
+}
+
+// return 1 --> true
+bool checkAns_suduku(int **p, int n){
+    int count = 0;
+    for(int i = 0; i < n*n; i++){
+        for(int j = 0; j < n*n; j++){
+            if(checkAns_of_each(p, n, i, j))    count++;
+        }
+    }
+
+    if(count == n*n*n*n)    return true;
+    else                    return false;
 }
