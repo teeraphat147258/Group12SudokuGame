@@ -13,7 +13,8 @@ class sudoku{
         bool checkEmpty(int **, int &, int &);
         void randomBox(int **, int, int);
         void copyTable(int **, int **);
-
+        bool check_different_answer(int, int);
+        void hideBox(int **, int , int , int &, int &);
     public :
         int **key, **table, **ch;
         sudoku(int);
@@ -27,6 +28,7 @@ class sudoku{
         bool checkAns(int **);
         bool solveSudoku(int **);
         void randomTable(int **);
+        void createTable();
 };
 
 sudoku::sudoku(int size = 3){           // create box 3*3 --> Array 9*9
@@ -230,4 +232,71 @@ void sudoku::copyTable(int **target, int **data){
         for(int j = 0; j < n*n; j++)
             target[i][j] = data[i][j];
     }
+}
+
+bool sudoku::check_different_answer(int x_Box, int y_Box){
+
+    int **s;
+    newMatrix(s);
+    int x, y, limit = 0;
+
+    while(1){
+        copyTable(s, table);
+        hideBox(s, x_Box, y_Box, x, y);
+            
+        solveSudoku(s);
+        limit++;
+        int count = 0;
+        for(int i = 0; i < n*n; i++)  for(int j = 0; j < n*n; j++){
+            if(s[i][j] == key[i][j])      count ++;
+        }
+
+        if(count == n*n*n*n){
+            table[x][y] = 0;
+            break;
+        }
+
+        if(limit > 64){
+            deleteMatrix(s);
+            return false;
+        }     
+
+    }
+    deleteMatrix(s);
+}
+
+void sudoku::hideBox(int **table, int x_Box, int y_Box, int &x, int &y){
+    
+    while(1){
+        x = rand()%3 + (x_Box*3);
+        y = rand()%3 + (y_Box*3);
+        if(table[x][y] != 0){
+            table[x][y] = 0;
+            break;
+        }    
+    }
+
+}
+
+void sudoku::createTable(){
+    bool oneans = false;
+    
+    for(int i = 0; i < n; i++)  for(int j = 0; j < n; j++)  {
+
+        if(!oneans){
+            randomTable(key);
+            copyTable(table, key);
+            i = 0;
+            j = 0;
+        }
+
+        int r = rand()%100 + 1; // 0% -> 4, 65% -> 3, 25% -> 2, 5% -> 1
+
+        if(r <= 65)             for(int k = 0; k < 6; k++)      oneans = check_different_answer(i, j);       //show 4 number
+        else if(r <= 90)        for(int k = 0; k < 7; k++)      oneans = check_different_answer(i, j);       //show 3 number
+        else                    for(int k = 0; k < 8; k++)      oneans = check_different_answer(i, j);       //show 2 number
+
+        if(i == n-1 && j == n-1 && !oneans)     createTable();
+
+    }   
 }
