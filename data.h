@@ -10,7 +10,7 @@ class sudoku{
         bool checkCol(int **, int, int, int);
         bool checkBox(int **, int, int, int);
         bool checkAns_of_each(int **, int, int);
-        
+        bool checkEmpty(int **, int &, int &);
 
     public :
         int **key, **table, **ch;
@@ -18,11 +18,12 @@ class sudoku{
         ~sudoku();
 
         void printTable(int **);
-        void set0(int **);                   // set value to zero
-        void EXsudoku0(int **);              // example suduku
+        void set0(int **);                  // set value to zero
+        void EXsudoku0(int **);             // example sudoku for check answer
+        void EXsudoku1(int **);             // example sudoku for solve answer
 
         bool checkAns(int **);
-
+        bool solveSudoku(int **);
 };
 
 sudoku::sudoku(int size = 3){           // create box 3*3 --> Array 9*9
@@ -92,6 +93,24 @@ void sudoku::EXsudoku0(int **ans){
     }
 }
 
+void sudoku::EXsudoku1(int **ans){
+
+    int a[9*9] =    { 0,0,3,0,0,0,4,0,0,
+                      0,0,0,8,0,0,0,0,0,
+                      0,0,0,0,3,0,2,0,0,
+                      0,0,0,0,0,0,0,0,0,
+                      0,0,0,0,0,0,0,0,0,
+                      0,0,0,0,0,0,0,0,0,
+                      0,0,0,3,0,0,0,0,5,
+                      5,0,0,0,0,0,0,0,0,
+                      0,1,0,4,0,0,0,6,0 };
+
+    for(int i = 0; i < n*n; i++){
+        for(int j = 0; j < n*n; j++)
+            ans[i][j] = a[i*n*n+j];
+    }
+}
+
 // x --> row , y --> colum
 // x is fixed
 bool sudoku::checkRow(int **ans, int x, int y, int num){
@@ -147,4 +166,30 @@ bool sudoku::checkAns(int **ans){
 
     if(count == n*n*n*n)    return true;
     else                    return false;
+}
+
+bool sudoku::checkEmpty(int **ans, int &x, int &y){
+    for(x = 0; x < n*n; x++){
+        for(y = 0; y < n*n; y++){
+            if(ans[x][y] == 0)    return true;
+        }
+    }
+    return false;
+}
+
+bool sudoku::solveSudoku(int **ans){
+    int x, y;
+    if(!checkEmpty(ans, x, y))     return true;
+
+    for(int num = 1; num <= n*n; num++){
+
+        if(!checkRow(ans, x, y, num) && !checkCol(ans, x, y, num) && !checkBox(ans, x, y, num)){
+            ans[x][y] = num;
+            if(solveSudoku(ans))   return true;
+            ans[x][y] = 0;
+        }
+
+    }
+    return false;
+
 }

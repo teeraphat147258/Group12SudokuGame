@@ -4,9 +4,12 @@ int main(){
 
     sudoku game;
 
-    game.EXsudoku0(game.table);
+    game.EXsudoku1(game.table);
     game.printTable(game.table);
     
+    game.solveSudoku(game.table);
+    game.printTable(game.table);
+
     if(game.checkAns(game.table))   cout << "Correct";
     else                            cout << "Incorrect";
 
