@@ -11,6 +11,8 @@ class sudoku{
         bool checkBox(int **, int, int, int);
         bool checkAns_of_each(int **, int, int);
         bool checkEmpty(int **, int &, int &);
+        void randomBox(int **, int, int);
+        void copyTable(int **, int **);
 
     public :
         int **key, **table, **ch;
@@ -24,6 +26,7 @@ class sudoku{
 
         bool checkAns(int **);
         bool solveSudoku(int **);
+        void randomTable(int **);
 };
 
 sudoku::sudoku(int size = 3){           // create box 3*3 --> Array 9*9
@@ -192,4 +195,39 @@ bool sudoku::solveSudoku(int **ans){
     }
     return false;
 
+}
+
+void sudoku::randomBox(int **table, int x_Box, int y_Box){
+    
+    for(int num = 1; num <= n*n; num++){
+
+        while(1){
+            int x = rand()%3 + (x_Box*3);
+            int y = rand()%3 + (y_Box*3);
+            if(table[x][y] == 0){
+                table[x][y] = num;
+                break;
+            }    
+        }
+
+    }
+
+}
+
+void sudoku::randomTable(int **table){                                          
+    
+    set0(table);
+    for(int i = 0; i < n; i++)      randomBox(table, i, i);
+
+    //printTable(table);      //check
+
+    solveSudoku(table);
+        
+}
+
+void sudoku::copyTable(int **target, int **data){
+    for(int i = 0; i < n*n; i++){
+        for(int j = 0; j < n*n; j++)
+            target[i][j] = data[i][j];
+    }
 }
