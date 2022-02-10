@@ -1,4 +1,7 @@
 #include<iostream>
+#include<cstdlib>
+#include<ctime>
+#include<string>
 using namespace std;
 
 class sudoku{
@@ -15,6 +18,8 @@ class sudoku{
         void copyTable(int **, int **);
         bool check_different_answer(int, int);
         void hideBox(int **, int , int , int &, int &);
+        void createChannel();
+        bool checkWith_Key();
     public :
         int **key, **table, **ch;
         sudoku(int);
@@ -29,6 +34,7 @@ class sudoku{
         bool solveSudoku(int **);
         void randomTable(int **);
         void createTable();
+        void addAnswer();
 };
 
 sudoku::sudoku(int size = 3){           // create box 3*3 --> Array 9*9
@@ -299,4 +305,72 @@ void sudoku::createTable(){
         if(i == n-1 && j == n-1 && !oneans)     createTable();
 
     }   
+}
+
+void sudoku::createChannel(){
+    set0(ch);
+
+    for(int x = 0; x < n*n; x++){
+        for(int y = 0; y < n*n; y++){
+            if(table[x][y] != 0)
+                ch[x][y] = 1;
+        }
+    }
+
+}
+
+bool sudoku::checkWith_Key(){
+    int count = 0;
+    for(int x = 0; x < n*n; x++){
+        for(int y = 0; y < n*n; y++){
+            if(table[x][y] == key[x][y])    count++;
+        }
+    }
+
+    if(count == n*n*n*n)    return true;
+    else                    return false;
+}
+
+void sudoku::addAnswer(){
+    createChannel();
+    int x, y, num;
+    string text;
+    char key;
+
+    cout << "Answer in from " << "\"A Row Col Number\"" << " or " << "\"D Row Col\"" << endl;
+    cout << "Exit in from " << "\"E\"" << endl;
+    cout << "Check in from " << "\"C\"" << endl;
+
+    while(1){
+            cout << "Input : ";
+    getline(cin, text);
+    sscanf(text.c_str(), "%c %d %d %d", &key, &x, &y, &num);
+    
+    // cout << key << endl;
+    // cout << x << " " << y << " " << num << endl;
+
+    if(key == 'A'){
+
+        if(table[x-1][y-1] == 0 && ch[x-1][y-1] == 0){
+            table[x-1][y-1] = num;
+        }else   cout << "Table is not empty." << endl;
+
+    }else if(key == 'D'){
+
+        if(ch[x-1][y-1] != 1){
+            table[x-1][y-1] = 0;
+        }else   cout << "Can not delete." << endl;
+
+    }else if(key == 'E'){
+        break;
+    }else if(key == 'C'){
+        if(checkWith_Key()) cout << "Correct" << endl;
+        else                cout << "Wrong" << endl;
+    }else{
+        cout << "Invalid Input" << endl;
+    }
+
+    printTable(table);
+    }
+
 }
