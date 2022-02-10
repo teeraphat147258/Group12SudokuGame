@@ -2,16 +2,15 @@
 
 int main(){
 
+    srand(time(0));
     sudoku game;
 
-    game.EXsudoku1(game.table);
+    game.createTable();
+    // game.printTable(game.key);
     game.printTable(game.table);
-    
-    game.solveSudoku(game.table);
-    game.printTable(game.table);
-
-    if(game.checkAns(game.table))   cout << "Correct";
-    else                            cout << "Incorrect";
+    // game.solveSuduku(game.table);
+    // game.printTable(game.table);
+    game.addAnswer();
 
     return 0;
 }
