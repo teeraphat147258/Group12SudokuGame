@@ -22,7 +22,7 @@ class sudoku{
         bool checkWith_Key();
     public :
         int **key, **table, **ch;
-        sudoku(int);
+        sudoku(int = 3);
         ~sudoku();
 
         void printTable(int **);
@@ -37,7 +37,7 @@ class sudoku{
         void addAnswer();
 };
 
-sudoku::sudoku(int size = 3){           // create box 3*3 --> Array 9*9
+sudoku::sudoku(int size){           // create box 3*3 --> Array 9*9
     n = size;
     newMatrix(key);       
     newMatrix(table);
@@ -227,7 +227,7 @@ void sudoku::randomTable(int **table){
     set0(table);
     for(int i = 0; i < n; i++)      randomBox(table, i, i);
 
-    //printTable(table);      //check
+    // printTable(table);      //check
 
     solveSudoku(table);
         
