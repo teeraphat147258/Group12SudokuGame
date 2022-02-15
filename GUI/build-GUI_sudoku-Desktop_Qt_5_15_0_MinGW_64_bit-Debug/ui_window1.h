@@ -12,18 +12,36 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_window1
 {
 public:
+    QPushButton *pushButton_easy;
+    QPushButton *pushButton_2_normal;
+    QPushButton *pushButton_3_hard;
+    QLabel *label;
 
     void setupUi(QDialog *window1)
     {
         if (window1->objectName().isEmpty())
             window1->setObjectName(QString::fromUtf8("window1"));
         window1->resize(598, 526);
+        pushButton_easy = new QPushButton(window1);
+        pushButton_easy->setObjectName(QString::fromUtf8("pushButton_easy"));
+        pushButton_easy->setGeometry(QRect(230, 180, 141, 51));
+        pushButton_2_normal = new QPushButton(window1);
+        pushButton_2_normal->setObjectName(QString::fromUtf8("pushButton_2_normal"));
+        pushButton_2_normal->setGeometry(QRect(230, 250, 141, 51));
+        pushButton_3_hard = new QPushButton(window1);
+        pushButton_3_hard->setObjectName(QString::fromUtf8("pushButton_3_hard"));
+        pushButton_3_hard->setGeometry(QRect(230, 320, 141, 51));
+        label = new QLabel(window1);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(250, 40, 91, 51));
 
         retranslateUi(window1);
 
@@ -33,6 +51,10 @@ public:
     void retranslateUi(QDialog *window1)
     {
         window1->setWindowTitle(QCoreApplication::translate("window1", "Dialog", nullptr));
+        pushButton_easy->setText(QCoreApplication::translate("window1", "Easy", nullptr));
+        pushButton_2_normal->setText(QCoreApplication::translate("window1", "Normal", nullptr));
+        pushButton_3_hard->setText(QCoreApplication::translate("window1", "Hard", nullptr));
+        label->setText(QCoreApplication::translate("window1", "Choose Difficult", nullptr));
     } // retranslateUi
 
 };
