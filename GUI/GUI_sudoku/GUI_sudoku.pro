@@ -11,12 +11,14 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    sudoku.cpp \
     window1.cpp \
     window2.cpp \
     window3.cpp
 
 HEADERS += \
     mainwindow.h \
+    sudoku.h \
     window1.h \
     window2.h \
     window3.h
