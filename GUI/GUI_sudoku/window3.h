@@ -23,15 +23,19 @@ public:
     QString diff;
     sudoku game;
     int x, y;
+    QPushButton *last_click;
 
     QString NumToText(int **p, int x, int y);
     void SetTable(QPushButton *[], int **p);
     QPushButton *numpad[9], *table[81];
     void setP_numpad(QPushButton *[]);
     void setP_table(QPushButton *[]);
+    void setDisabled_table(int **);
     void setup();
     bool check_delete(int **);
     bool check_add(int **);
+    void when_been_click_table();
+    void after_been_click_table();
 
 private slots:
     void on_pushButton_delete_clicked();
@@ -53,6 +57,7 @@ private slots:
     void on_pushButton20_clicked();
     void on_pushButton21_clicked();
     void on_pushButton22_clicked();
+    void on_pushButton_check_clicked();
 };
 
 #endif // WINDOW3_H

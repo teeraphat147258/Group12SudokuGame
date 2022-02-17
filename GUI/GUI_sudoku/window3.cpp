@@ -72,12 +72,19 @@ void window3::setP_table(QPushButton *table[]){
     table[8] = ui->pushButton22;
 }
 
+void window3::setDisabled_table(int **ch){
+    for(int i = 0; i < 3; i++)
+        for(int j = 0; j < 3; j++)
+            if(ch[i][j] == 1)   table[3*i + j]->setEnabled(false);
+}
+
 void window3::setup(){
     game.createTable(diff);
     game.createChannel();
     setP_numpad(numpad);
     setP_table(table);
     SetTable(table, game.table);
+    setDisabled_table(game.ch);
 }
 
 bool window3::check_delete(int **ch){
@@ -90,6 +97,18 @@ bool window3::check_add(int **ch){
     else                    return false;
 }
 
+void window3::when_been_click_table(){
+    table[3*x + y]->setStyleSheet("QPushButton{ background: rgb(255, 51, 51); }");
+    last_click = table[3*x + y];
+}
+
+void window3::after_been_click_table(){
+    last_click->setStyleSheet("QPushButton{ background: rgb(255, 255, 255); }");
+
+}
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void window3::on_pushButton_delete_clicked()
@@ -98,6 +117,21 @@ void window3::on_pushButton_delete_clicked()
         game.table[x][y] = 0;
         table[3*x + y]->setText(" ");
     }
+}
+
+void window3::on_pushButton_check_clicked()
+{
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
+    for(int i = 0; i < 3; i++)
+        for(int j = 0; j < 3; j++)
+            if(game.key[i][j] == game.table[i][j] && game.ch[i][j] == 0){
+                table[3*i + j]->setEnabled(false);
+                table[3*i + j]->setStyleSheet("QPushButton{	background: rgb(170, 255, 127); color: rgb(170, 0, 0); }");
+            }
+    x = -1;     y = -1;
 }
 
 /////////////////////////////////////////////////////////numpad//////////////////////////////////////////////////////////////
@@ -196,53 +230,110 @@ void window3::on_pushButton_num9_clicked()
 
 void window3::on_pushButton00_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 0;      y = 0;
+
+    when_been_click_table();
 }
 
 void window3::on_pushButton01_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 0;      y = 1;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton02_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 0;      y = 2;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton10_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 1;      y = 0;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton11_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 1;      y = 1;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton12_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 1;      y = 2;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton20_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 2;      y = 0;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton21_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 2;      y = 1;
+
+    when_been_click_table();
 }
 
 
 void window3::on_pushButton22_clicked()
 {
+    if(x >= 0 && y >= 0){
+        after_been_click_table();
+    }
+
     x = 2;      y = 2;
+
+    when_been_click_table();
 }
+
+
+
 
