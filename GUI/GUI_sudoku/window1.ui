@@ -13,6 +13,21 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+	background-color: rgb(170, 255, 127);
+}
+QLabel{
+	
+	color: rgb(85, 0, 255);
+	font: 70pt &quot;Century Gothic&quot;;
+}
+QPushButton{
+	font: 15pt &quot;Century Gothic&quot;;
+	background-color: rgb(255, 255, 127);
+	color: rgb(85, 0, 255);
+}</string>
+  </property>
   <widget class="QPushButton" name="pushButton_easy">
    <property name="geometry">
     <rect>
@@ -55,10 +70,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>180</y>
-     <width>91</width>
-     <height>51</height>
+     <x>120</x>
+     <y>110</y>
+     <width>721</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">

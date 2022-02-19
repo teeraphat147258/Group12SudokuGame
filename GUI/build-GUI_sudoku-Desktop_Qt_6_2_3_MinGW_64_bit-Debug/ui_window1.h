@@ -30,6 +30,19 @@ public:
         if (window1->objectName().isEmpty())
             window1->setObjectName(QString::fromUtf8("window1"));
         window1->resize(1000, 800);
+        window1->setStyleSheet(QString::fromUtf8("QDialog{\n"
+"	background-color: rgb(170, 255, 127);\n"
+"}\n"
+"QLabel{\n"
+"	\n"
+"	color: rgb(85, 0, 255);\n"
+"	font: 70pt \"Century Gothic\";\n"
+"}\n"
+"QPushButton{\n"
+"	font: 15pt \"Century Gothic\";\n"
+"	background-color: rgb(255, 255, 127);\n"
+"	color: rgb(85, 0, 255);\n"
+"}"));
         pushButton_easy = new QPushButton(window1);
         pushButton_easy->setObjectName(QString::fromUtf8("pushButton_easy"));
         pushButton_easy->setGeometry(QRect(400, 320, 141, 51));
@@ -41,7 +54,7 @@ public:
         pushButton_3_hard->setGeometry(QRect(400, 460, 141, 51));
         label = new QLabel(window1);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(420, 180, 91, 51));
+        label->setGeometry(QRect(120, 110, 721, 71));
 
         retranslateUi(window1);
 
