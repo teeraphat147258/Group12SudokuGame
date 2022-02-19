@@ -2383,11 +2383,61 @@ QPushButton{
      <height>61</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background: rgb(170, 170, 255);
+	font-size: 24px;
+	color: rgb(0, 0, 127);
+}</string>
+   </property>
    <property name="text">
     <string>END</string>
    </property>
   </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>640</y>
+     <width>211</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	background: rgb(255, 144, 253);
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>650</y>
+     <width>191</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	background: rgb(255, 170, 255)
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
   <zorder>frame</zorder>
+  <zorder>frame_3</zorder>
   <zorder>pushButton_delete</zorder>
   <zorder>pushButton_check</zorder>
   <zorder>pushButton20</zorder>
@@ -2481,9 +2531,10 @@ QPushButton{
   <zorder>pushButton_num2</zorder>
   <zorder>pushButton_num3</zorder>
   <zorder>label_2</zorder>
-  <zorder>label_timeout</zorder>
   <zorder>pushButton_end</zorder>
   <zorder>pushButton63</zorder>
+  <zorder>frame_2</zorder>
+  <zorder>label_timeout</zorder>
  </widget>
  <resources/>
  <connections/>

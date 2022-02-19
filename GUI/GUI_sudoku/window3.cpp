@@ -267,10 +267,11 @@ void window3::restart(){
 
 void window3::win(){
 
-    QMessageBox::StandardButton ans = QMessageBox::question(this, "WIN !!!", "Do you want to play again ?",
-                                                            QMessageBox::Yes | QMessageBox::No);
-
     if(game.checkWith_Key()){
+
+        QMessageBox::StandardButton ans = QMessageBox::question(this, "WIN !!!", "Do you want to play again ?",
+                                                                QMessageBox::Yes | QMessageBox::No);
+
         if(ans == QMessageBox::Yes){
             restart();
         }else{
@@ -307,6 +308,7 @@ void window3::on_pushButton_check_clicked()
                 table[9*i + j]->setEnabled(false);
                 table[9*i + j]->setStyleSheet("QPushButton{	background: rgb(170, 255, 127); color: rgb(170, 0, 0); }");
             }
+    win();
     x = -1;     y = -1;
 }
 

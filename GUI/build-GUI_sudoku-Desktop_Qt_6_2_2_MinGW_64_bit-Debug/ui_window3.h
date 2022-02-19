@@ -118,6 +118,8 @@ public:
     QLabel *label_2;
     QLabel *label_timeout;
     QPushButton *pushButton_end;
+    QFrame *frame_3;
+    QFrame *frame_2;
 
     void setupUi(QDialog *window3)
     {
@@ -754,14 +756,36 @@ public:
 "}"));
         label_timeout = new QLabel(window3);
         label_timeout->setObjectName(QString::fromUtf8("label_timeout"));
-        label_timeout->setGeometry(QRect(740, 650, 171, 81));
+        label_timeout->setGeometry(QRect(740, 650, 181, 81));
         QFont font1;
         label_timeout->setFont(font1);
         label_timeout->setStyleSheet(QString::fromUtf8("font-size: 60px;"));
         pushButton_end = new QPushButton(window3);
         pushButton_end->setObjectName(QString::fromUtf8("pushButton_end"));
         pushButton_end->setGeometry(QRect(40, 40, 93, 61));
+        pushButton_end->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	background: rgb(170, 170, 255);\n"
+"	font-size: 24px;\n"
+"	color: rgb(0, 0, 127);\n"
+"}"));
+        frame_3 = new QFrame(window3);
+        frame_3->setObjectName(QString::fromUtf8("frame_3"));
+        frame_3->setGeometry(QRect(720, 640, 211, 101));
+        frame_3->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"	background: rgb(255, 144, 253);\n"
+"}"));
+        frame_3->setFrameShape(QFrame::StyledPanel);
+        frame_3->setFrameShadow(QFrame::Raised);
+        frame_2 = new QFrame(window3);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setGeometry(QRect(730, 650, 191, 80));
+        frame_2->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"	background: rgb(255, 170, 255)\n"
+"}"));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
         frame->raise();
+        frame_3->raise();
         pushButton_delete->raise();
         pushButton_check->raise();
         pushButton20->raise();
@@ -855,9 +879,10 @@ public:
         pushButton_num2->raise();
         pushButton_num3->raise();
         label_2->raise();
-        label_timeout->raise();
         pushButton_end->raise();
         pushButton63->raise();
+        frame_2->raise();
+        label_timeout->raise();
 
         retranslateUi(window3);
 
