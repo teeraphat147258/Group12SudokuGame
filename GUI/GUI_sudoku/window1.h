@@ -26,6 +26,10 @@ private slots:
 private:
     Ui::window1 *ui;
     window3 *win3;
+
+public:
+    void back();
+
 };
 
 #endif // WINDOW1_H

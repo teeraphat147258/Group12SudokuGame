@@ -21,7 +21,6 @@ class sudoku{
         void copyTable(int **, int **);
         bool check_different_answer(int, int);
         void hideBox(int **, int , int , int &, int &);
-        bool checkWith_Key();
 
     public :
         int **key, **table, **ch;
@@ -43,6 +42,7 @@ class sudoku{
         void createTable(QString);
         void addAnswer();
         void createChannel();
+        bool checkWith_Key();
 };
 
 #endif // SUDOKU_H

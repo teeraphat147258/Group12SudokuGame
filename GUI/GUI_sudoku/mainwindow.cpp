@@ -3,7 +3,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow) ,win1(new window1) ,win2(new window2)
+    , ui(new Ui::MainWindow) ,win1(new window1(this)) ,win2(new window2(this))
 {
     ui->setupUi(this);
 }
