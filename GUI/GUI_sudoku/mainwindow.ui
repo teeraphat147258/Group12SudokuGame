@@ -6,22 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>800</height>
+    <width>996</width>
+    <height>829</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+	font:century gothic;
+	font-size:72px;
+}
+
+QMainWindow{
+	background-color: rgb(170, 255, 127);
+}
+
+QPushButton{
+	font:century gothic;
+	font-size:24px;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton_Start">
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>270</y>
+      <y>430</y>
       <width>221</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Start</string>
@@ -31,7 +49,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>370</y>
+      <y>570</y>
       <width>221</width>
       <height>81</height>
      </rect>
@@ -40,16 +58,22 @@
      <string>Tutorial</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1000</width>
-     <height>26</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>80</y>
+      <width>531</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>SUDOKU GAME</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

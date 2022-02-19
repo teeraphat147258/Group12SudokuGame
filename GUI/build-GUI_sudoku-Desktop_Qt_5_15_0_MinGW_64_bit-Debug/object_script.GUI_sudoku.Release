@@ -1,0 +1,10 @@
+release/main.o
+release/mainwindow.o
+release/sudoku.o
+release/window1.o
+release/window2.o
+release/window3.o
+release/moc_mainwindow.o
+release/moc_window1.o
+release/moc_window2.o
+release/moc_window3.o
