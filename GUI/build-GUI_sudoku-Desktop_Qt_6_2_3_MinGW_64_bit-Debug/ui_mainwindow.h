@@ -26,7 +26,6 @@ public:
     QPushButton *pushButton_Start;
     QPushButton *pushButton_tutorial;
     QLabel *label_title;
-    QLabel *label_bg;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -34,7 +33,9 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(996, 829);
-        MainWindow->setStyleSheet(QString::fromUtf8(""));
+        MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow{\n"
+"background-color: rgb(170, 255, 127);\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton_Start = new QPushButton(centralwidget);
@@ -85,16 +86,7 @@ public:
 "	font:century gothic;\n"
 "	font-size:72px;\n"
 "}"));
-        label_bg = new QLabel(centralwidget);
-        label_bg->setObjectName(QString::fromUtf8("label_bg"));
-        label_bg->setGeometry(QRect(0, 0, 1001, 831));
-        label_bg->setPixmap(QPixmap(QString::fromUtf8("C:/Users/ACER Aspire7/Downloads/sudoBG.jpg")));
-        label_bg->setScaledContents(true);
         MainWindow->setCentralWidget(centralwidget);
-        label_bg->raise();
-        pushButton_Start->raise();
-        pushButton_tutorial->raise();
-        label_title->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -110,7 +102,6 @@ public:
         pushButton_Start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         pushButton_tutorial->setText(QCoreApplication::translate("MainWindow", "Tutorial", nullptr));
         label_title->setText(QCoreApplication::translate("MainWindow", "SUDOKU GAME", nullptr));
-        label_bg->setText(QString());
     } // retranslateUi
 
 };

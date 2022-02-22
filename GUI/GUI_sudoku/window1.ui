@@ -22,11 +22,7 @@ QLabel{
 	color: rgb(85, 0, 255);
 	font: 70pt &quot;Century Gothic&quot;;
 }
-QPushButton{
-	font: 15pt &quot;Century Gothic&quot;;
-	background-color: rgb(255, 255, 127);
-	color: rgb(85, 0, 255);
-}</string>
+</string>
   </property>
   <widget class="QPushButton" name="pushButton_easy">
    <property name="geometry">
@@ -36,6 +32,25 @@ QPushButton{
      <width>141</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 15pt &quot;Century Gothic&quot;;
+	background-color: rgb(255, 255, 127);
+	color: rgb(85, 0, 255);
+	border-radius:25px;
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(0, 0, 255);
+}
+
+QPushButton:hover{
+
+	background-color: rgb(197, 197, 98);
+	border-color: rgb(0, 0, 255);
+}
+
+</string>
    </property>
    <property name="text">
     <string>Easy</string>
@@ -50,6 +65,25 @@ QPushButton{
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 15pt &quot;Century Gothic&quot;;
+	background-color: rgb(255, 255, 127);
+	color: rgb(85, 0, 255);
+	border-radius:25px;
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(0, 0, 255);
+}
+
+QPushButton:hover{
+
+	background-color: rgb(197, 197, 98);
+	border-color: rgb(0, 0, 255);
+}
+
+</string>
+   </property>
    <property name="text">
     <string>Normal</string>
    </property>
@@ -62,6 +96,25 @@ QPushButton{
      <width>141</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 15pt &quot;Century Gothic&quot;;
+	background-color: rgb(255, 255, 127);
+	color: rgb(85, 0, 255);
+	border-radius:25px;
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(0, 0, 255);
+}
+
+QPushButton:hover{
+
+	background-color: rgb(197, 197, 98);
+	border-color: rgb(0, 0, 255);
+}
+
+</string>
    </property>
    <property name="text">
     <string>Hard</string>
