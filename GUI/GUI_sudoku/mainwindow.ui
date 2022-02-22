@@ -14,19 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel{
-	font:century gothic;
-	font-size:72px;
-}
-
-QMainWindow{
-	background-color: rgb(170, 255, 127);
-}
-
-QPushButton{
-	font:century gothic;
-	font-size:24px;
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton_Start">
@@ -39,7 +27,24 @@ QPushButton{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QPushButton {
+	selection-color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(0, 0, 0);
+	border-radius:25px;
+	font:century gothic;
+	font-size:24px;
+}
+
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+	background-color: rgb(218, 218, 218);
+	border-color: rgb(255, 255, 255);
+}
+
+</string>
     </property>
     <property name="text">
      <string>Start</string>
@@ -54,11 +59,30 @@ QPushButton{
       <height>81</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	selection-color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(0, 0, 0);
+	border-radius:25px;
+	font:century gothic;
+	font-size:24px;
+}
+
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+	background-color: rgb(218, 218, 218);
+	border-color: rgb(255, 255, 255);
+}
+</string>
+    </property>
     <property name="text">
      <string>Tutorial</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_title">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -68,12 +92,38 @@ QPushButton{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QLabel{
+	font:century gothic;
+	font-size:72px;
+}</string>
     </property>
     <property name="text">
      <string>SUDOKU GAME</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_bg">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1001</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/ACER Aspire7/Downloads/sudoBG.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label_bg</zorder>
+   <zorder>pushButton_Start</zorder>
+   <zorder>pushButton_tutorial</zorder>
+   <zorder>label_title</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

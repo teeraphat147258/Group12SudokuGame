@@ -11,8 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -25,27 +25,42 @@ public:
     QWidget *centralwidget;
     QPushButton *pushButton_Start;
     QPushButton *pushButton_tutorial;
-    QMenuBar *menubar;
+    QLabel *label;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1000, 800);
+        MainWindow->resize(996, 829);
+        MainWindow->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font:century gothic;\n"
+"	font-size:72px;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	font:century gothic;\n"
+"	font-size:24px;\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton_Start = new QPushButton(centralwidget);
         pushButton_Start->setObjectName(QString::fromUtf8("pushButton_Start"));
-        pushButton_Start->setGeometry(QRect(370, 270, 221, 81));
+        pushButton_Start->setGeometry(QRect(370, 430, 221, 81));
+        pushButton_Start->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	border-radius:30px;\n"
+"}"));
         pushButton_tutorial = new QPushButton(centralwidget);
         pushButton_tutorial->setObjectName(QString::fromUtf8("pushButton_tutorial"));
-        pushButton_tutorial->setGeometry(QRect(370, 370, 221, 81));
+        pushButton_tutorial->setGeometry(QRect(370, 570, 221, 81));
+        pushButton_tutorial->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	border-radius:30px;\n"
+"}"));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(220, 80, 531, 181));
+        label->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1000, 26));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -60,6 +75,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         pushButton_Start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         pushButton_tutorial->setText(QCoreApplication::translate("MainWindow", "Tutorial", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "SUDOKU GAME", nullptr));
     } // retranslateUi
 
 };
