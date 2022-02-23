@@ -1220,7 +1220,9 @@ debug/window1.o: ../GUI_sudoku/window1.cpp ../GUI_sudoku/window1.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
-		ui_window1.h
+		ui_window1.h \
+		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QMessageBox \
+		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\window1.o ..\GUI_sudoku\window1.cpp
 
 debug/window2.o: ../GUI_sudoku/window2.cpp ../GUI_sudoku/window2.h \

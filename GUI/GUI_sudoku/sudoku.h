@@ -32,7 +32,6 @@ class sudoku{
         void set0(int **);                  // set value to zero
         void EXsudoku0(int **);             // example sudoku for check answer
         void EXsudoku1(int **);             // example sudoku for solve answer
-        void EXsudoku2(int **, int);             // example sudoku 1 box
 
         void newMatrix(int ** &, int = 3);
         void deleteMatrix(int **, int = 3);
