@@ -267,6 +267,11 @@ release/moc_mainwindow.cpp: ../GUI_sudoku/mainwindow.h \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QDialog \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
 		../GUI_sudoku/window3.h \
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
 		../GUI_sudoku/window2.h \
 		release/moc_predefs.h \
 		D:/Pro/6.2.2/mingw_64/bin/moc.exe
@@ -404,6 +409,11 @@ release/moc_window1.cpp: ../GUI_sudoku/window1.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../GUI_sudoku/window3.h \
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
 		release/moc_predefs.h \
 		D:/Pro/6.2.2/mingw_64/bin/moc.exe
 	D:\Pro\6.2.2\mingw_64\bin\moc.exe $(DEFINES) --include D:/261102/Project/Group12SudokuGame/GUI/build-GUI_sudoku-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/Pro/6.2.2/mingw_64/mkspecs/win32-g++ -ID:/261102/Project/Group12SudokuGame/GUI/GUI_sudoku -ID:/Pro/6.2.2/mingw_64/include -ID:/Pro/6.2.2/mingw_64/include/QtWidgets -ID:/Pro/6.2.2/mingw_64/include/QtGui -ID:/Pro/6.2.2/mingw_64/include/QtCore -I. -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Pro/Tools/mingw900_64/x86_64-w64-mingw32/include ..\GUI_sudoku\window1.h -o release\moc_window1.cpp
@@ -674,6 +684,11 @@ release/moc_window3.cpp: ../GUI_sudoku/window3.h \
 		D:/Pro/6.2.2/mingw_64/include/QtGui/QTransform \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
 		release/moc_predefs.h \
 		D:/Pro/6.2.2/mingw_64/bin/moc.exe
 	D:\Pro\6.2.2\mingw_64\bin\moc.exe $(DEFINES) --include D:/261102/Project/Group12SudokuGame/GUI/build-GUI_sudoku-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/Pro/6.2.2/mingw_64/mkspecs/win32-g++ -ID:/261102/Project/Group12SudokuGame/GUI/GUI_sudoku -ID:/Pro/6.2.2/mingw_64/include -ID:/Pro/6.2.2/mingw_64/include/QtWidgets -ID:/Pro/6.2.2/mingw_64/include/QtGui -ID:/Pro/6.2.2/mingw_64/include/QtCore -I. -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Pro/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Pro/Tools/mingw900_64/x86_64-w64-mingw32/include ..\GUI_sudoku\window3.h -o release\moc_window3.cpp
@@ -850,6 +865,11 @@ release/main.o: ../GUI_sudoku/main.cpp ../GUI_sudoku/mainwindow.h \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QDialog \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
 		../GUI_sudoku/window3.h \
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
 		../GUI_sudoku/window2.h \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QApplication \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qapplication.h \
@@ -1010,42 +1030,57 @@ release/mainwindow.o: ../GUI_sudoku/mainwindow.cpp ../GUI_sudoku/mainwindow.h \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QDialog \
 		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qdialog.h \
 		../GUI_sudoku/window3.h \
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
 		../GUI_sudoku/window2.h \
-		ui_mainwindow.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/QVariant \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QApplication \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qeventloop.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfutureinterface.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qmutex.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qresultstore.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture_impl.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthreadpool.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthread.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qdeadlinetimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qelapsedtimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qrunnable.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qexception.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qinputmethod.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qlocale.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QMenuBar \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qmenubar.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qmenu.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qaction.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QPushButton \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QStatusBar \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qstatusbar.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\GUI_sudoku\mainwindow.cpp
 
-release/sudoku.o: ../GUI_sudoku/sudoku.cpp ../GUI_sudoku/sudoku.h
+release/sudoku.o: ../GUI_sudoku/sudoku.cpp ../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qstring.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qchar.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qglobal.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qconfig.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtcore-config.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qsystemdetection.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qprocessordetection.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qcompilerdetection.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtypeinfo.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qcontainerfwd.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qsysinfo.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qlogging.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qflags.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qatomic.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasicatomic.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qatomic_bootstrap.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qgenericatomic.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qatomic_cxx11.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qglobalstatic.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qnumeric.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qversiontagging.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qstringview.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbytearray.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qrefcount.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qnamespace.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtmetamacros.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qarraydata.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qpair.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qarraydatapointer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qarraydataops.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qcontainertools_impl.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbytearrayview.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qstringliteral.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qstringalgorithms.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qanystringview.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qutf8stringview.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qstringtokenizer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\sudoku.o ..\GUI_sudoku\sudoku.cpp
 
 release/window1.o: ../GUI_sudoku/window1.cpp ../GUI_sudoku/window1.h \
@@ -1180,37 +1215,12 @@ release/window1.o: ../GUI_sudoku/window1.cpp ../GUI_sudoku/window1.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
 		../GUI_sudoku/window3.h \
-		ui_window1.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/QVariant \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QApplication \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qeventloop.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfutureinterface.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qmutex.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qresultstore.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture_impl.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthreadpool.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthread.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qdeadlinetimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qelapsedtimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qrunnable.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qexception.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qinputmethod.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qlocale.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QLabel \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qlabel.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qframe.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qpicture.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qtextdocument.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QPushButton \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qicon.h
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
+		ui_window1.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\window1.o ..\GUI_sudoku\window1.cpp
 
 release/window2.o: ../GUI_sudoku/window2.cpp ../GUI_sudoku/window2.h \
@@ -1344,28 +1354,7 @@ release/window2.o: ../GUI_sudoku/window2.cpp ../GUI_sudoku/window2.h \
 		D:/Pro/6.2.2/mingw_64/include/QtGui/QTransform \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
-		ui_window2.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/QVariant \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QApplication \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qeventloop.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfutureinterface.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qmutex.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qresultstore.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture_impl.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthreadpool.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthread.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qdeadlinetimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qelapsedtimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qrunnable.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qexception.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qinputmethod.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qlocale.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication_platform.h
+		ui_window2.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\window2.o ..\GUI_sudoku\window2.cpp
 
 release/window3.o: ../GUI_sudoku/window3.cpp ../GUI_sudoku/window3.h \
@@ -1499,38 +1488,14 @@ release/window3.o: ../GUI_sudoku/window3.cpp ../GUI_sudoku/window3.h \
 		D:/Pro/6.2.2/mingw_64/include/QtGui/QTransform \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/Pro/6.2.2/mingw_64/include/QtCore/qloggingcategory.h \
+		../GUI_sudoku/sudoku.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QString \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/QTimer \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qtimer.h \
+		D:/Pro/6.2.2/mingw_64/include/QtCore/qbasictimer.h \
 		ui_window3.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/QVariant \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QApplication \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qeventloop.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfutureinterface.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qmutex.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qresultstore.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qfuture_impl.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthreadpool.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qthread.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qdeadlinetimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qelapsedtimer.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qrunnable.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qexception.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qinputmethod.h \
-		D:/Pro/6.2.2/mingw_64/include/QtCore/qlocale.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qguiapplication_platform.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QGridLayout \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qgridlayout.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qlayout.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qlayoutitem.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qboxlayout.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QPushButton \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qabstractbutton.h \
-		D:/Pro/6.2.2/mingw_64/include/QtGui/qicon.h \
-		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QWidget
+		D:/Pro/6.2.2/mingw_64/include/QtWidgets/QMessageBox \
+		D:/Pro/6.2.2/mingw_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\window3.o ..\GUI_sudoku\window3.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 

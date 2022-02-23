@@ -12,3 +12,10 @@ window2::~window2()
 {
     delete ui;
 }
+
+void window2::on_pushButton_back_clicked()
+{
+    this->parentWidget()->show();
+    hide();
+}
+

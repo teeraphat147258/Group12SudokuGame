@@ -15,6 +15,9 @@ public:
     explicit window2(QWidget *parent = nullptr);
     ~window2();
 
+private slots:
+    void on_pushButton_back_clicked();
+
 private:
     Ui::window2 *ui;
 };

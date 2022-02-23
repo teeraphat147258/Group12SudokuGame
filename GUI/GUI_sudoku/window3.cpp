@@ -10,6 +10,7 @@ window3::window3(QWidget *parent) :
     diff = NULL;
     time = new QTimer(this);
     time->start(1000);
+    start_time = 0;
 }
 
 window3::~window3()
@@ -205,9 +206,8 @@ void window3::after_been_click_table(){
 }
 
 void window3::timeset(){
-    if(diff == "easy"){             i_min = 45;         i_sec = 0;}
-    else if(diff == "normal"){      i_min = 30;         i_sec = 0;}
-    else if(diff == "hard"){        i_min = 20;         i_sec = 0;}
+    i_min = start_time;
+    i_sec = 0;
 }
 
 void window3::int_to_text(){
@@ -314,9 +314,10 @@ void window3::on_pushButton_check_clicked()
 
 void window3::on_pushButton_end_clicked()
 {
+    start_time = 0;
     disconnect(time, SIGNAL(timeout()), this, SLOT(time_out()));
-    hide();
     this->parentWidget()->show();
+    hide();
 }
 
 /////////////////////////////////////////////////////////numpad//////////////////////////////////////////////////////////////

@@ -152,6 +152,10 @@ public:
         pushButton_delete->setFont(font);
         pushButton_delete->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(255, 51, 51);\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(255, 21, 21);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_check = new QPushButton(window3);
         pushButton_check->setObjectName(QString::fromUtf8("pushButton_check"));
@@ -160,7 +164,11 @@ public:
         pushButton_check->setSizePolicy(sizePolicy);
         pushButton_check->setFont(font);
         pushButton_check->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	background: rgb(255, 255, 127);\n"
+"	background-color: rgb(255, 255, 127);\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(255, 255, 108);\n"
+"	color: rgb(255, 255, 255);\n"
 "}\n"
 ""));
         pushButton20 = new QPushButton(window3);
@@ -169,54 +177,63 @@ public:
         sizePolicy.setHeightForWidth(pushButton20->sizePolicy().hasHeightForWidth());
         pushButton20->setSizePolicy(sizePolicy);
         pushButton20->setFont(font);
+        pushButton20->setStyleSheet(QString::fromUtf8(""));
         pushButton11 = new QPushButton(window3);
         pushButton11->setObjectName(QString::fromUtf8("pushButton11"));
         pushButton11->setGeometry(QRect(120, 218, 66, 64));
         sizePolicy.setHeightForWidth(pushButton11->sizePolicy().hasHeightForWidth());
         pushButton11->setSizePolicy(sizePolicy);
         pushButton11->setFont(font);
+        pushButton11->setStyleSheet(QString::fromUtf8(""));
         pushButton22 = new QPushButton(window3);
         pushButton22->setObjectName(QString::fromUtf8("pushButton22"));
         pushButton22->setGeometry(QRect(186, 282, 65, 63));
         sizePolicy.setHeightForWidth(pushButton22->sizePolicy().hasHeightForWidth());
         pushButton22->setSizePolicy(sizePolicy);
         pushButton22->setFont(font);
+        pushButton22->setStyleSheet(QString::fromUtf8(""));
         pushButton02 = new QPushButton(window3);
         pushButton02->setObjectName(QString::fromUtf8("pushButton02"));
         pushButton02->setGeometry(QRect(186, 155, 65, 63));
         sizePolicy.setHeightForWidth(pushButton02->sizePolicy().hasHeightForWidth());
         pushButton02->setSizePolicy(sizePolicy);
         pushButton02->setFont(font);
+        pushButton02->setStyleSheet(QString::fromUtf8(""));
         pushButton10 = new QPushButton(window3);
         pushButton10->setObjectName(QString::fromUtf8("pushButton10"));
         pushButton10->setGeometry(QRect(54, 218, 66, 64));
         sizePolicy.setHeightForWidth(pushButton10->sizePolicy().hasHeightForWidth());
         pushButton10->setSizePolicy(sizePolicy);
         pushButton10->setFont(font);
+        pushButton10->setStyleSheet(QString::fromUtf8(""));
         pushButton01 = new QPushButton(window3);
         pushButton01->setObjectName(QString::fromUtf8("pushButton01"));
         pushButton01->setGeometry(QRect(120, 155, 66, 63));
         sizePolicy.setHeightForWidth(pushButton01->sizePolicy().hasHeightForWidth());
         pushButton01->setSizePolicy(sizePolicy);
         pushButton01->setFont(font);
+        pushButton01->setStyleSheet(QString::fromUtf8(""));
         pushButton21 = new QPushButton(window3);
         pushButton21->setObjectName(QString::fromUtf8("pushButton21"));
         pushButton21->setGeometry(QRect(120, 282, 66, 63));
         sizePolicy.setHeightForWidth(pushButton21->sizePolicy().hasHeightForWidth());
         pushButton21->setSizePolicy(sizePolicy);
         pushButton21->setFont(font);
+        pushButton21->setStyleSheet(QString::fromUtf8(""));
         pushButton00 = new QPushButton(window3);
         pushButton00->setObjectName(QString::fromUtf8("pushButton00"));
         pushButton00->setGeometry(QRect(54, 155, 66, 63));
         sizePolicy.setHeightForWidth(pushButton00->sizePolicy().hasHeightForWidth());
         pushButton00->setSizePolicy(sizePolicy);
         pushButton00->setFont(font);
+        pushButton00->setStyleSheet(QString::fromUtf8(""));
         pushButton12 = new QPushButton(window3);
         pushButton12->setObjectName(QString::fromUtf8("pushButton12"));
         pushButton12->setGeometry(QRect(186, 218, 65, 64));
         sizePolicy.setHeightForWidth(pushButton12->sizePolicy().hasHeightForWidth());
         pushButton12->setSizePolicy(sizePolicy);
         pushButton12->setFont(font);
+        pushButton12->setStyleSheet(QString::fromUtf8(""));
         pushButton46 = new QPushButton(window3);
         pushButton46->setObjectName(QString::fromUtf8("pushButton46"));
         pushButton46->setGeometry(QRect(465, 417, 66, 63));
@@ -547,12 +564,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton04->sizePolicy().hasHeightForWidth());
         pushButton04->setSizePolicy(sizePolicy);
         pushButton04->setFont(font);
+        pushButton04->setStyleSheet(QString::fromUtf8(""));
         pushButton05 = new QPushButton(window3);
         pushButton05->setObjectName(QString::fromUtf8("pushButton05"));
         pushButton05->setGeometry(QRect(391, 155, 65, 63));
         sizePolicy.setHeightForWidth(pushButton05->sizePolicy().hasHeightForWidth());
         pushButton05->setSizePolicy(sizePolicy);
         pushButton05->setFont(font);
+        pushButton05->setStyleSheet(QString::fromUtf8(""));
         pushButton23 = new QPushButton(window3);
         pushButton23->setObjectName(QString::fromUtf8("pushButton23"));
         pushButton23->setGeometry(QRect(260, 282, 66, 63));
@@ -589,6 +608,7 @@ public:
         sizePolicy.setHeightForWidth(pushButton03->sizePolicy().hasHeightForWidth());
         pushButton03->setSizePolicy(sizePolicy);
         pushButton03->setFont(font);
+        pushButton03->setStyleSheet(QString::fromUtf8(""));
         pushButton25 = new QPushButton(window3);
         pushButton25->setObjectName(QString::fromUtf8("pushButton25"));
         pushButton25->setGeometry(QRect(391, 282, 65, 63));
@@ -665,6 +685,10 @@ public:
         pushButton_num4->setFont(font);
         pushButton_num4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num8 = new QPushButton(window3);
         pushButton_num8->setObjectName(QString::fromUtf8("pushButton_num8"));
@@ -674,6 +698,10 @@ public:
         pushButton_num8->setFont(font);
         pushButton_num8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num9 = new QPushButton(window3);
         pushButton_num9->setObjectName(QString::fromUtf8("pushButton_num9"));
@@ -683,6 +711,10 @@ public:
         pushButton_num9->setFont(font);
         pushButton_num9->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num1 = new QPushButton(window3);
         pushButton_num1->setObjectName(QString::fromUtf8("pushButton_num1"));
@@ -692,6 +724,10 @@ public:
         pushButton_num1->setFont(font);
         pushButton_num1->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num7 = new QPushButton(window3);
         pushButton_num7->setObjectName(QString::fromUtf8("pushButton_num7"));
@@ -701,6 +737,10 @@ public:
         pushButton_num7->setFont(font);
         pushButton_num7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num5 = new QPushButton(window3);
         pushButton_num5->setObjectName(QString::fromUtf8("pushButton_num5"));
@@ -710,6 +750,10 @@ public:
         pushButton_num5->setFont(font);
         pushButton_num5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num6 = new QPushButton(window3);
         pushButton_num6->setObjectName(QString::fromUtf8("pushButton_num6"));
@@ -719,6 +763,10 @@ public:
         pushButton_num6->setFont(font);
         pushButton_num6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num2 = new QPushButton(window3);
         pushButton_num2->setObjectName(QString::fromUtf8("pushButton_num2"));
@@ -728,6 +776,10 @@ public:
         pushButton_num2->setFont(font);
         pushButton_num2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         pushButton_num3 = new QPushButton(window3);
         pushButton_num3->setObjectName(QString::fromUtf8("pushButton_num3"));
@@ -737,6 +789,10 @@ public:
         pushButton_num3->setFont(font);
         pushButton_num3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background: rgb(75, 162, 255)\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background: rgb(44, 139, 255);\n"
+"	color: rgb(255,255,255);\n"
 "}"));
         frame = new QFrame(window3);
         frame->setObjectName(QString::fromUtf8("frame"));
@@ -767,10 +823,14 @@ public:
 "	background: rgb(170, 170, 255);\n"
 "	font-size: 24px;\n"
 "	color: rgb(0, 0, 127);\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background: rgb(116, 128, 170);\n"
+"	color : rgb(255, 255, 255);\n"
 "}"));
         frame_3 = new QFrame(window3);
         frame_3->setObjectName(QString::fromUtf8("frame_3"));
-        frame_3->setGeometry(QRect(720, 640, 211, 101));
+        frame_3->setGeometry(QRect(720, 640, 221, 101));
         frame_3->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "	background: rgb(255, 144, 253);\n"
 "}"));
@@ -778,7 +838,7 @@ public:
         frame_3->setFrameShadow(QFrame::Raised);
         frame_2 = new QFrame(window3);
         frame_2->setObjectName(QString::fromUtf8("frame_2"));
-        frame_2->setGeometry(QRect(730, 650, 191, 80));
+        frame_2->setGeometry(QRect(730, 650, 201, 80));
         frame_2->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "	background: rgb(255, 170, 255)\n"
 "}"));

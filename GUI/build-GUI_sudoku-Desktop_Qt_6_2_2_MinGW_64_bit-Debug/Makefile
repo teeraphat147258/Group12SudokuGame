@@ -182,7 +182,6 @@ Makefile: ../GUI_sudoku/GUI_sudoku.pro D:/Pro/6.2.2/mingw_64/mkspecs/win32-g++/q
 		D:/Pro/6.2.2/mingw_64/mkspecs/features/qt_config.prf \
 		D:/Pro/6.2.2/mingw_64/mkspecs/win32-g++/qmake.conf \
 		D:/Pro/6.2.2/mingw_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		D:/Pro/6.2.2/mingw_64/mkspecs/features/exclusive_builds.prf \
 		D:/Pro/6.2.2/mingw_64/mkspecs/features/toolchain.prf \
 		D:/Pro/6.2.2/mingw_64/mkspecs/features/default_pre.prf \
@@ -212,6 +211,7 @@ Makefile: ../GUI_sudoku/GUI_sudoku.pro D:/Pro/6.2.2/mingw_64/mkspecs/win32-g++/q
 		D:/Pro/6.2.2/mingw_64/lib/Qt6Gui.prl \
 		D:/Pro/6.2.2/mingw_64/lib/Qt6Core.prl \
 		D:/Pro/6.2.2/mingw_64/lib/Qt6EntryPoint.prl \
+		.qmake.stash \
 		D:/Pro/6.2.2/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\GUI_sudoku\GUI_sudoku.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/Pro/6.2.2/mingw_64/mkspecs/features/spec_pre.prf:
@@ -326,7 +326,6 @@ D:/Pro/6.2.2/mingw_64/mkspecs/features/qt_functions.prf:
 D:/Pro/6.2.2/mingw_64/mkspecs/features/qt_config.prf:
 D:/Pro/6.2.2/mingw_64/mkspecs/win32-g++/qmake.conf:
 D:/Pro/6.2.2/mingw_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 D:/Pro/6.2.2/mingw_64/mkspecs/features/exclusive_builds.prf:
 D:/Pro/6.2.2/mingw_64/mkspecs/features/toolchain.prf:
 D:/Pro/6.2.2/mingw_64/mkspecs/features/default_pre.prf:
@@ -356,6 +355,7 @@ D:/Pro/6.2.2/mingw_64/lib/Qt6Widgets.prl:
 D:/Pro/6.2.2/mingw_64/lib/Qt6Gui.prl:
 D:/Pro/6.2.2/mingw_64/lib/Qt6Core.prl:
 D:/Pro/6.2.2/mingw_64/lib/Qt6EntryPoint.prl:
+.qmake.stash:
 D:/Pro/6.2.2/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\GUI_sudoku\GUI_sudoku.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

@@ -23,9 +23,20 @@ private slots:
 
     void on_pushButton_3_hard_clicked();
 
+    void on_pushButton_back_clicked();
+
+    void on_pushButton_30min_clicked();
+
+    void on_pushButton_45min_clicked();
+
+    void on_pushButton_60min_clicked();
+
+    void on_pushButton_nolimit_clicked();
+
 private:
     Ui::window1 *ui;
     window3 *win3;
+    bool check_time_button;
 
 public:
     void back();
