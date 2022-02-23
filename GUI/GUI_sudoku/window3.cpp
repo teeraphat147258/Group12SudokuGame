@@ -11,6 +11,7 @@ window3::window3(QWidget *parent) :
     time = new QTimer(this);
     time->start(1000);
     start_time = 0;
+    check_time_nolimit = false;
 }
 
 window3::~window3()
@@ -171,6 +172,8 @@ void window3::setEnabled_table(){
 void window3::start(){
     x = -1;     y = -1;
     check_count = 0;
+    ui->label_timeout->setStyleSheet("font-size: 60px;");
+    ui->label_timeout->setText("00 : 00");
     game.set0(game.ch);
     game.createTable(diff);
     game.createChannel();
@@ -206,8 +209,14 @@ void window3::after_been_click_table(){
 }
 
 void window3::timeset(){
-    i_min = start_time;
-    i_sec = 0;
+
+    if(check_time_nolimit){
+        i_min = 0;
+        i_sec = 0;
+    }else{
+        i_min = start_time;
+        i_sec = 0;
+    }
 }
 
 void window3::int_to_text(){
@@ -233,7 +242,9 @@ void window3::when_timeout(){
                                                             QMessageBox::Yes | QMessageBox::No);
 
     if(ans == QMessageBox::Yes){
-        restart();
+        disconnect(time, SIGNAL(timeout()), this, SLOT(time_out()));
+        this->parentWidget()->show();
+        hide();
     }else{
         this->close();
     }
@@ -242,10 +253,23 @@ void window3::when_timeout(){
 
 void window3::time_out(){
 
-    i_sec--;
+    if(check_time_nolimit){
+        i_sec++;
 
-    if(i_min == 0 && i_sec == -1)         when_timeout();
-    else if(i_min < 0)                  when_timeout();
+        if(i_sec >= 60){
+            i_sec = 0;
+            i_min++;
+        }
+
+        if(i_min >= 100)        ui->label_timeout->setStyleSheet("font-size: 48px;");
+        else                    ui->label_timeout->setStyleSheet("font-size: 60px;");
+
+    }else{
+        i_sec--;
+
+        if(i_min == 0 && i_sec == -1)         when_timeout();
+        else if(i_min < 0)                  when_timeout();
+    }
 
     int_to_text();
 
@@ -273,7 +297,9 @@ void window3::win(){
                                                                 QMessageBox::Yes | QMessageBox::No);
 
         if(ans == QMessageBox::Yes){
-            restart();
+            disconnect(time, SIGNAL(timeout()), this, SLOT(time_out()));
+            this->parentWidget()->show();
+            hide();
         }else{
             this->close();
         }
@@ -294,7 +320,10 @@ void window3::on_pushButton_delete_clicked()
 void window3::on_pushButton_check_clicked()
 {
     check_count++;
-    if(check_count > 3)     i_min -= 5;
+    if(check_count > 3){
+        if(check_time_nolimit)      i_min += 5;
+        else                        i_min -= 5;
+    }
 
     int_to_text();
 

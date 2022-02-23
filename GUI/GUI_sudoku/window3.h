@@ -33,6 +33,7 @@ public:
     QString timeout;
     int check_count;
     int start_time;
+    bool check_time_nolimit;
     QString NumToText(int **p, int x, int y);
     void SetTable(QPushButton *[], int **p);
     void cleartable(QPushButton *[]);

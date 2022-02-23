@@ -26,6 +26,7 @@ public:
     QPushButton *pushButton_Start;
     QPushButton *pushButton_tutorial;
     QLabel *label_title;
+    QLabel *label_title_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -81,12 +82,26 @@ public:
 ""));
         label_title = new QLabel(centralwidget);
         label_title->setObjectName(QString::fromUtf8("label_title"));
-        label_title->setGeometry(QRect(220, 80, 531, 181));
+        label_title->setGeometry(QRect(190, 80, 621, 181));
         label_title->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	font:century gothic;\n"
-"	font-size:72px;\n"
+"	font: bold;\n"
+"	font-size:80px;\n"
+"}"));
+        label_title_2 = new QLabel(centralwidget);
+        label_title_2->setObjectName(QString::fromUtf8("label_title_2"));
+        label_title_2->setGeometry(QRect(180, 70, 621, 181));
+        label_title_2->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font:century gothic;\n"
+"	font: bold;\n"
+"	font-size:80px;\n"
+"	color: rgb(163, 163, 163);\n"
 "}"));
         MainWindow->setCentralWidget(centralwidget);
+        label_title_2->raise();
+        pushButton_Start->raise();
+        pushButton_tutorial->raise();
+        label_title->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -102,6 +117,7 @@ public:
         pushButton_Start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         pushButton_tutorial->setText(QCoreApplication::translate("MainWindow", "Tutorial", nullptr));
         label_title->setText(QCoreApplication::translate("MainWindow", "SUDOKU GAME", nullptr));
+        label_title_2->setText(QCoreApplication::translate("MainWindow", "SUDOKU GAME", nullptr));
     } // retranslateUi
 
 };

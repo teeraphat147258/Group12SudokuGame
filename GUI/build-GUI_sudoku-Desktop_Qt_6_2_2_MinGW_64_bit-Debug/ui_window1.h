@@ -32,6 +32,7 @@ public:
     QPushButton *pushButton_45min;
     QPushButton *pushButton_60min;
     QPushButton *pushButton_nolimit;
+    QLabel *label_3;
 
     void setupUi(QDialog *window1)
     {
@@ -110,6 +111,7 @@ public:
         label = new QLabel(window1);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(120, 140, 721, 71));
+        label->setStyleSheet(QString::fromUtf8("font: bold;"));
         pushButton_back = new QPushButton(window1);
         pushButton_back->setObjectName(QString::fromUtf8("pushButton_back"));
         pushButton_back->setGeometry(QRect(30, 30, 141, 51));
@@ -223,6 +225,18 @@ public:
 "	background-color: rgb(197, 197, 98);\n"
 "	border-color: rgb(0, 0, 255);\n"
 "}"));
+        label_3 = new QLabel(window1);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(110, 130, 721, 71));
+        label_3->setStyleSheet(QString::fromUtf8("color: rgb(149, 130, 255);\n"
+"font: bold;"));
+        label_3->raise();
+        pushButton_easy->raise();
+        pushButton_2_normal->raise();
+        pushButton_3_hard->raise();
+        label->raise();
+        pushButton_back->raise();
+        frame->raise();
 
         retranslateUi(window1);
 
@@ -242,6 +256,7 @@ public:
         pushButton_45min->setText(QCoreApplication::translate("window1", "45 Min", nullptr));
         pushButton_60min->setText(QCoreApplication::translate("window1", "60 Min", nullptr));
         pushButton_nolimit->setText(QCoreApplication::translate("window1", "No Limit", nullptr));
+        label_3->setText(QCoreApplication::translate("window1", "Choose Difficult", nullptr));
     } // retranslateUi
 
 };

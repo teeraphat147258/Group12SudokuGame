@@ -87,22 +87,48 @@ QPushButton:hover{
    <widget class="QLabel" name="label_title">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>190</x>
       <y>80</y>
-      <width>531</width>
+      <width>621</width>
       <height>181</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
 	font:century gothic;
-	font-size:72px;
+	font: bold;
+	font-size:80px;
 }</string>
     </property>
     <property name="text">
      <string>SUDOKU GAME</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_title_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>70</y>
+      <width>621</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	font:century gothic;
+	font: bold;
+	font-size:80px;
+	color: rgb(163, 163, 163);
+}</string>
+    </property>
+    <property name="text">
+     <string>SUDOKU GAME</string>
+    </property>
+   </widget>
+   <zorder>label_title_2</zorder>
+   <zorder>pushButton_Start</zorder>
+   <zorder>pushButton_tutorial</zorder>
+   <zorder>label_title</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

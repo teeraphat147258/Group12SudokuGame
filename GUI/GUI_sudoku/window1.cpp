@@ -77,6 +77,7 @@ void window1::on_pushButton_back_clicked()
 
 void window1::on_pushButton_30min_clicked()
 {
+    win3->check_time_nolimit = false;
     check_time_button = true;
     win3->start_time = 30;
 }
@@ -84,6 +85,7 @@ void window1::on_pushButton_30min_clicked()
 
 void window1::on_pushButton_45min_clicked()
 {
+    win3->check_time_nolimit = false;
     check_time_button = true;
     win3->start_time = 45;
 }
@@ -91,6 +93,7 @@ void window1::on_pushButton_45min_clicked()
 
 void window1::on_pushButton_60min_clicked()
 {
+    win3->check_time_nolimit = false;
     check_time_button = true;
     win3->start_time = 60;
 }
@@ -98,6 +101,7 @@ void window1::on_pushButton_60min_clicked()
 
 void window1::on_pushButton_nolimit_clicked()
 {
-
+    check_time_button = true;
+    win3->check_time_nolimit = true;
 }
 
