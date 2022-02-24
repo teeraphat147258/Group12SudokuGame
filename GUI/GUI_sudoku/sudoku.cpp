@@ -1,4 +1,4 @@
-#include "sudoku.h"
+    #include "sudoku.h"
 
 sudoku::sudoku(int size){           // create box 3*3 --> Array 9*9
     srand(time(0));
@@ -88,7 +88,7 @@ void sudoku::EXsudoku1(int **ans){
 
 // x --> row , y --> colum
 // x is fixed
-bool sudoku::checkRow(int **ans, int x, int y, int num){
+bool sudoku::checkRow(int **ans, int x, int num){
     for (int i = 0; i < n*n; i++){
         if (ans[x][i] == num)
             return true;
@@ -98,7 +98,7 @@ bool sudoku::checkRow(int **ans, int x, int y, int num){
 
 // x --> row , y --> colum
 // y is fixed
-bool sudoku::checkCol(int **ans, int x, int y, int num){
+bool sudoku::checkCol(int **ans, int y, int num){
     for (int i = 0; i < n*n; i++){
         if (ans[i][y] == num)
             return true;
@@ -121,8 +121,8 @@ bool sudoku::checkBox(int **ans, int x, int y, int num){
 bool sudoku::checkAns_of_each(int **ans, int x, int y){
     int Crow = 0, Ccol = 0, Cbox = 0;
     for(int num = 1; num <= n*n; num++){
-        if(checkRow(ans, x, y, num))  Crow++;
-        if(checkCol(ans, x, y, num))  Ccol++;
+        if(checkRow(ans, x, num))  Crow++;
+        if(checkCol(ans, y, num))  Ccol++;
         if(checkBox(ans, x, y, num))  Cbox++;
     }
 
@@ -158,7 +158,7 @@ bool sudoku::solveSudoku(int **ans){
 
     for(int num = 1; num <= n*n; num++){
 
-        if(!checkRow(ans, x, y, num) && !checkCol(ans, x, y, num) && !checkBox(ans, x, y, num)){
+        if(!checkRow(ans, x, num) && !checkCol(ans, y, num) && !checkBox(ans, x, y, num)){
             ans[x][y] = num;
             if(solveSudoku(ans))   return true;
             ans[x][y] = 0;
@@ -233,6 +233,7 @@ bool sudoku::check_different_answer(int x_Box, int y_Box){
 
     }
     deleteMatrix(s);
+    return true;
 }
 
 void sudoku::hideBox(int **table, int x_Box, int y_Box, int &x, int &y){
@@ -264,19 +265,26 @@ void sudoku::createTable(QString mode){
 
         if(mode == "easy"){
 
-            if(r <= 50)             for(int k = 0; k < 4; k++)      oneans = check_different_answer(i, j);       //show 5 number
-            else if(r <= 100)        for(int k = 0; k < 5; k++)      oneans = check_different_answer(i, j);       //show 4 number
+            if(r <= 20)             for(int k = 0; k < 3; k++)      oneans = check_different_answer(i, j);       //show 6 number
+            else if(r <= 50)       for(int k = 0; k < 4; k++)      oneans = check_different_answer(i, j);      //show 5 number
+            else if(r <= 75)        for(int k = 0; k < 5; k++)      oneans = check_different_answer(i, j);      //show 4 number
+            else if(r <= 90)        for(int k = 0; k < 6; k++)      oneans = check_different_answer(i, j);       //show 3 number
+            else                    for(int k = 0; k < 7; k++)      oneans = check_different_answer(i, j);       //show 2 number
 
         }else if(mode == "normal"){
 
-            if(r <= 60)             for(int k = 0; k < 5; k++)      oneans = check_different_answer(i, j);       //show 4 number
-            else if(r <= 100)        for(int k = 0; k < 6; k++)      oneans = check_different_answer(i, j);      //show 3 number
+            if(r <= 10)             for(int k = 0; k < 4; k++)      oneans = check_different_answer(i, j);       //show 5 number
+            else if(r <= 50)        for(int k = 0; k < 5; k++)      oneans = check_different_answer(i, j);       //show 4 number
+            else if(r <= 70)        for(int k = 0; k < 6; k++)      oneans = check_different_answer(i, j);       //show 3 number
+            else if(r <= 80)        for(int k = 0; k < 8; k++)      oneans = check_different_answer(i, j);       //show 1 number
+            else                    for(int k = 0; k < 7; k++)      oneans = check_different_answer(i, j);       //show 2 number
 
         }else if(mode == "hard"){
 
-            if(r <= 30)             for(int k = 0; k < 6; k++)      oneans = check_different_answer(i, j);       //show 4 number
-            else if(r <= 80)        for(int k = 0; k < 7; k++)      oneans = check_different_answer(i, j);       //show 3 number
-            else                    for(int k = 0; k < 8; k++)      oneans = check_different_answer(i, j);       //show 2 number
+            if(r <= 25)             for(int k = 0; k < 5; k++)      oneans = check_different_answer(i, j);       //show 4 number
+            else if(r <= 40)        for(int k = 0; k < 6; k++)      oneans = check_different_answer(i, j);       //show 3 number
+            else if(r <= 60)        for(int k = 0; k < 7; k++)      oneans = check_different_answer(i, j);       //show 2 number
+            else                    for(int k = 0; k < 8; k++)      oneans = check_different_answer(i, j);       //show 1 number
 
         }
 
@@ -284,6 +292,8 @@ void sudoku::createTable(QString mode){
 
     }
 }
+
+
 
 void sudoku::createChannel(){
     set0(ch);

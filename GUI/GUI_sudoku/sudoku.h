@@ -12,8 +12,8 @@ using namespace std;
 class sudoku{
     private :
         int n;
-        bool checkRow(int **, int, int, int);
-        bool checkCol(int **, int, int, int);
+        bool checkRow(int **, int, int);
+        bool checkCol(int **, int, int);
         bool checkBox(int **, int, int, int);
         bool checkAns_of_each(int **, int, int);
         bool checkEmpty(int **, int &, int &);
